@@ -1,11 +1,22 @@
 import React from "react";
 import { Text, View } from "react-native";
-import RecipeCard from "./components/recipeCard";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Home from "./screens/Home";
+import SavedRecipes from "./screens/SavedRecipes";
+import Settings from "./screens/Settings";
 
-export default function Index() {
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <View>
-      <Text>Hello world</Text>
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Saved" component={SavedRecipes} />
+      <Tab.Screen name="Settings" component={Settings} />
+    </Tab.Navigator>
   );
+}
+export default function App() {
+  return <MyTabs />;
 }
