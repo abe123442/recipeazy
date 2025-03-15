@@ -3,7 +3,7 @@ import { ChevronDownIcon } from "@/components/ui/icon"
 	
 function DropDownFilter() {
   return (
-    <div className='flex flex-col gap-y-4 justify-center pt-3 p-5'>
+    <div className='flex flex-col gap-y-4 justify-center p-5'>
     {/* Kitchen Staples */}
     <Select className='w-auto'>
           <SelectTrigger variant="outline" size="xl" >
