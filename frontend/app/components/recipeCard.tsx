@@ -5,23 +5,37 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { Image } from "@/components/ui/image";
 import { VStack } from "@/components/ui/vstack";
+import { HStack } from "@/components/ui/hstack";
 
-export default function RecipeCard() {
+interface RecipeCardProps {
+  name: string;
+  imgUrl: string;
+  RecipeSource: string;
+}
+
+const RecipeCard: React.FC<RecipeCardProps> = ({
+  name,
+  imgUrl,
+  RecipeSource,
+}) => {
   return (
     <View>
-      <Card size="md" variant="elevated" className="m-3">
-        <Image
-          size="md"
-          source={{
-            uri: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-          }}
-          alt="image"
-        />
-        <Vstack>
-          <Heading>Margherita Pizza</Heading>
-          <Text size="sm">makepizza.com</Text>
-        </Vstack>
+      <Card size="md" variant="elevated" className="m-3 w-96">
+        <HStack space="md">
+          <Image
+            size="md"
+            source={{
+              uri: imgUrl,
+            }}
+            alt="image"
+          />
+          <VStack>
+            <Heading>{name}</Heading>
+            <Text size="sm">{RecipeSource}</Text>
+          </VStack>
+        </HStack>
       </Card>
     </View>
   );
-}
+};
+export default RecipeCard;
