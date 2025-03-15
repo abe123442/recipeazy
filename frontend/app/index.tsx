@@ -1,10 +1,10 @@
-import React from "react";
-import { Text, View } from "react-native";
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "./screens/Home";
-import SavedRecipes from "./screens/SavedRecipes";
-import Settings from "./screens/Settings";
+import React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from './screens/Home';
+import SavedRecipes from './screens/SavedRecipes';
+import Settings from './screens/Settings';
 
 const Tab = createBottomTabNavigator();
 
