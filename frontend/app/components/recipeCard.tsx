@@ -5,31 +5,32 @@ import { Image } from "@/components/ui/image";
 import { Link, LinkText } from "@/components/ui/link";
 import { Text } from "@/components/ui/text";
 import { Icon, ArrowRightIcon } from "@/components/ui/icon";
+import { View } from "react-native";
 import React from "react";
 
 interface RecipeCardProps {
   name: string;
-  imgUrl: string; 
-  date: string; 
-  link: string; 
+  imgUrl: string;
+  date: string;
+  link: string;
 }
 
 function RecipeCard({ name, imgUrl, date, link }: RecipeCardProps) {
   return (
-    <div>
+    <View>
       <Card className="p-8 rounded-lg max-w-[360px] m-3">
         <Image
           source={{
-            uri: imgUrl, 
+            uri: imgUrl,
           }}
           className="mb-6 h-[280px] w-full rounded-md aspect-[263/240]"
           alt="image"
         />
         <Text className="text-sm font-normal mb-2 text-typography-700">
-          {date} 
+          {date}
         </Text>
         <Heading size="md" className="mb-4">
-          {name} 
+          {name}
         </Heading>
         <Link href={link} isExternal>
           <HStack className="items-center">
@@ -47,8 +48,9 @@ function RecipeCard({ name, imgUrl, date, link }: RecipeCardProps) {
           </HStack>
         </Link>
       </Card>
-    </div>
+    </View>
   );
 }
 
 export default RecipeCard;
+
