@@ -8,29 +8,30 @@ import { Icon, ArrowRightIcon } from "@/components/ui/icon";
 	
 function RecipeCard(){
     return (
-      <Card className="p-5 rounded-lg max-w-[360px] m-3">
+      <div>
+      <Card className="p-8 rounded-lg max-w-[360px] m-3">
         <Image
         source={{
-          uri: 'https://gluestack.github.io/public-blog-video-assets/yoga.png',
+          uri: 'https://bellyfull.net/wp-content/uploads/2021/02/Chicken-Alfredo-blog-4.jpg',
         }}
-        className="mb-6 h-[240px] w-full rounded-md aspect-[263/240]"
+        className="mb-6 h-[280px] w-full rounded-md aspect-[263/240]"
         alt="image"
       />
       <Text
         className="text-sm font-normal mb-2 text-typography-700"
       >
-        May 15, 2023
+        Feb 8, 2021
       </Text>
       <Heading size="md" className="mb-4">
-        The Power of Positive Thinking
+      Chicken Alfredo
       </Heading>
-      <Link href="https://gluestack.io/" isExternal>
+      <Link href="https://bellyfull.net/chicken-alfredo-recipe/" isExternal>
         <HStack className="items-center">
           <LinkText
             size="sm"
             className="font-semibold text-info-600 no-underline"
           >
-            Read Blog
+            Look into this recipe
           </LinkText>
           <Icon
             as={ArrowRightIcon}
@@ -40,5 +41,8 @@ function RecipeCard(){
         </HStack>
       </Link>
     </Card>
+  </div>
 );
 }
+
+export default RecipeCard;
