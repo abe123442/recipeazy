@@ -9,9 +9,9 @@ import {
   SelectDragIndicatorWrapper,
   SelectDragIndicator,
   SelectItem,
-} from "@/components/ui/select";
-import { ChevronDownIcon } from "@/components/ui/icon";
-import { View } from "react-native";
+} from '@/components/ui/select';
+import { ChevronDownIcon } from '@/components/ui/icon';
+import { View } from 'react-native';
 
 function DropDownFilter() {
   return (

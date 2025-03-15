@@ -1,8 +1,8 @@
-import React from 'react'
-import { Heading } from '@/components/ui/heading'
-import RecipeCard from '../components/recipeCard'
-import { ScrollView, View } from 'react-native'
-import { VStack } from '@/components/ui/vstack'
+import React from 'react';
+import { Heading } from '@/components/ui/heading';
+import RecipeCard from '../components/recipeCard';
+import { ScrollView, View } from 'react-native';
+import { VStack } from '@/components/ui/vstack';
 
 const SavedRecipes = () => {
   const recipes = [
@@ -21,7 +21,7 @@ const SavedRecipes = () => {
       link: 'https://www.recipetineats.com/carbonara/',
     },
     // Add more recipes here
-  ]
+  ];
 
   return (
     <View className="flex-1 flex-col items-center justify-center">
@@ -41,7 +41,7 @@ const SavedRecipes = () => {
         </VStack>
       </ScrollView>
     </View>
-  )
-}
+  );
+};
 
-export default SavedRecipes
+export default SavedRecipes;

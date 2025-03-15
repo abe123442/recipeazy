@@ -1,12 +1,12 @@
-import { Card } from "@/components/ui/card";
-import { Heading } from "@/components/ui/heading";
-import { HStack } from "@/components/ui/hstack";
-import { Image } from "@/components/ui/image";
-import { Link, LinkText } from "@/components/ui/link";
-import { Text } from "@/components/ui/text";
-import { Icon, ArrowRightIcon } from "@/components/ui/icon";
-import React from "react";
-import { View } from "react-native";
+import { Card } from '@/components/ui/card';
+import { Heading } from '@/components/ui/heading';
+import { HStack } from '@/components/ui/hstack';
+import { Image } from '@/components/ui/image';
+import { Link, LinkText } from '@/components/ui/link';
+import { Text } from '@/components/ui/text';
+import { Icon, ArrowRightIcon } from '@/components/ui/icon';
+import React from 'react';
+import { View } from 'react-native';
 
 interface RecipeCardProps {
   name: string;
