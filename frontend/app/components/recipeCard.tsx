@@ -1,22 +1,26 @@
-import { Card } from "@/components/ui/card";
-import { Heading } from "@/components/ui/heading";
-import { HStack } from "@/components/ui/hstack";
-import { Image } from "@/components/ui/image";
-import { Text } from "@/components/ui/text";
-import { Icon, ArrowRightIcon } from "@/components/ui/icon";
-import { Link } from "expo-router";
-import { Pressable } from "react-native";
+import { Card } from '@/components/ui/card';
+import { Heading } from '@/components/ui/heading';
+import { HStack } from '@/components/ui/hstack';
+import { Image } from '@/components/ui/image';
+import { Text } from '@/components/ui/text';
+import { Icon, ArrowRightIcon } from '@/components/ui/icon';
+import { Link } from 'expo-router';
+import { Pressable } from 'react-native';
 
 interface RecipeCardProps {
   name: string;
   imgUrl: string;
   date: string;
-  link: string; 
+  link: string;
 }
 
 function RecipeCard({ name, imgUrl, date, link }: RecipeCardProps) {
   return (
-    <Link replace href={{ pathname: "/screens/RecipeDetail", params: { id: link } }} asChild>
+    <Link
+      replace
+      href={{ pathname: '/screens/RecipeDetail', params: { id: link } }}
+      asChild
+    >
       <Pressable>
         <Card className="p-8 rounded-lg max-w-[360px] m-3">
           <Image
