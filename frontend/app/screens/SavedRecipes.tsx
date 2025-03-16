@@ -11,14 +11,14 @@ const SavedRecipes = () => {
       imgUrl:
         'https://bellyfull.net/wp-content/uploads/2021/02/Chicken-Alfredo-blog-4.jpg',
       date: 'Feb 8, 2021',
-      link: 'https://bellyfull.net/chicken-alfredo-recipe/',
+      link: '1',
     },
     {
       name: 'Spaghetti Carbonara',
       imgUrl:
         'https://www.recipetineats.com/tachyon/2023/01/Carbonara_6a.jpg?resize=900%2C1125&zoom=0.72',
       date: '31 Jan 2023',
-      link: 'https://www.recipetineats.com/carbonara/',
+      link: '2',
     },
     // Add more recipes here
   ];

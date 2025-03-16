@@ -7,10 +7,13 @@ export default function RootLayout() {
     <GluestackUIProvider mode="light">
       <Stack>
         <Stack.Screen
-          name="index" // The name of the screen
-          options={{ headerShown: false }} // Disable the header for this screen
+          name="index" // The home screen
+          options={{ headerShown: false }} // Hide the header for the home screen
         />
-        <Stack.Screen name="saved-recipes" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="screens/RecipeDetail" // The detailed recipe screen
+          options={{ headerShown: true, title: 'Recipe Details' }} // Show the header for the detail screen
+        />
       </Stack>
     </GluestackUIProvider>
   );
