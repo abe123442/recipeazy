@@ -1,29 +1,16 @@
-import React, { useState } from 'react';
-import { TouchableOpacity, Text } from 'react-native';
-import {
-  Menu,
-  MenuItem,
-  MenuItemLabel,
-  MenuSeparator,
-} from '@/components/ui/menu'; // GlueStack UI Menu
-import {
-  ListFilter,
-  BadgeDollarSign,
-  Heart,
-  Leaf,
-  Vegan,
-} from 'lucide-react-native'; // Lucide icons
+import React, { useState } from "react";
+import { TouchableOpacity, Text, View } from "react-native";
+import { Menu, MenuItem, MenuItemLabel, MenuSeparator } from "@/components/ui/menu"; 
+import { ListFilter, BadgeDollarSign, Heart, CheckSquare, Leaf, Vegan } from "lucide-react-native";
 
 const FilterButton = () => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
 
-  // Toggle filter selection
   const toggleFilter = (filter: string) => {
-    setSelectedFilters(
-      (prev) =>
-        prev.includes(filter)
-          ? prev.filter((f) => f !== filter) // Remove filter if already selected
-          : [...prev, filter] // Add filter if not selected
+    setSelectedFilters((prev) =>
+      prev.includes(filter)
+        ? prev.filter((f) => f !== filter) // Remove filter if already selected
+        : [...prev, filter] // Add filter if not selected
     );
   };
 
@@ -35,56 +22,63 @@ const FilterButton = () => {
           className="flex-row items-center p-2.5 bg-gray-100 rounded-lg"
         >
           <ListFilter size={24} color="#000" /> {/* Filter icon */}
-          <Text className="ml-2 text-base">Filter by</Text>
+          <Text className="ml-2 text-base">Filter</Text>
         </TouchableOpacity>
       )}
     >
       {/* Filter by Cost */}
       <MenuItem
-        onPress={() => toggleFilter('Cost')}
-        className="flex-row items-center p-2"
+        onPress={() => toggleFilter("Cost")}
+        className={`flex-row items-center p-2 ${selectedFilters.includes("Cost") ? "bg-blue-50" : ""}`}
       >
         <BadgeDollarSign size={20} color="#000" className="mr-2" />
-        <MenuItemLabel>Cost</MenuItemLabel>
-        {selectedFilters.includes('Cost') && (
-          <Text className="ml-auto text-blue-500">✓</Text>
-        )}
+        <MenuItemLabel className={selectedFilters.includes("Cost") ? "font-bold" : ""}>
+          Filter by Cost
+        </MenuItemLabel>
       </MenuItem>
 
       {/* Healthy */}
       <MenuItem
-        onPress={() => toggleFilter('Healthy')}
-        className="flex-row items-center p-2"
+        onPress={() => toggleFilter("Healthy")}
+        className={`flex-row items-center p-2 ${selectedFilters.includes("Healthy") ? "bg-blue-50 border" : ""}`}
       >
         <Heart size={20} color="#000" className="mr-2" />
-        <MenuItemLabel>Healthiness</MenuItemLabel>
-        {selectedFilters.includes('Healthy') && (
-          <Text className="ml-auto text-blue-500">✓</Text>
-        )}
+        <MenuItemLabel className={selectedFilters.includes("Healthy") ? "font-bold" : ""}>
+          Healthy
+        </MenuItemLabel>
+      </MenuItem>
+
+      {/* Check Ingredient */}
+      <MenuItem
+        onPress={() => toggleFilter("Check Ingredient")}
+        className={`flex-row items-center p-2 ${selectedFilters.includes("Check Ingredient") ? "bg-blue-50" : ""}`}
+      >
+        <CheckSquare size={20} color="#000" className="mr-2" />
+        <MenuItemLabel className={selectedFilters.includes("Check Ingredient") ? "font-bold" : ""}>
+          Check Ingredient
+        </MenuItemLabel>
       </MenuItem>
 
       {/* Halal */}
       <MenuItem
-        onPress={() => toggleFilter('Halal')}
-        className="flex-row items-center p-2"
+        onPress={() => toggleFilter("Halal")}
+        className={`flex-row items-center p-2 ${selectedFilters.includes("Halal") ? "bg-blue-50" : ""}`}
       >
         <Leaf size={20} color="#000" className="mr-2" />
-        <MenuItemLabel>Halal</MenuItemLabel>
-        {selectedFilters.includes('Halal') && (
-          <Text className="ml-auto text-blue-500">✓</Text>
-        )}
+        <MenuItemLabel className={selectedFilters.includes("Halal") ? "font-bold" : ""}>
+          Halal
+        </MenuItemLabel>
       </MenuItem>
 
       {/* Vegan */}
       <MenuItem
-        onPress={() => toggleFilter('Vegan')}
-        className="flex-row items-center p-2"
+        onPress={() => toggleFilter("Vegan")}
+        className={`flex-row items-center p-2 ${selectedFilters.includes("Vegan") ? "bg-blue-50" : ""}`}
       >
         <Vegan size={20} color="#000" className="mr-2" />
-        <MenuItemLabel>Vegan</MenuItemLabel>
-        {selectedFilters.includes('Vegan') && (
-          <Text className="ml-auto text-blue-500">✓</Text>
-        )}
+        <MenuItemLabel className={selectedFilters.includes("Vegan") ? "font-bold" : ""}>
+          Vegan
+        </MenuItemLabel>
       </MenuItem>
     </Menu>
   );
