@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { TouchableOpacity, Text, View } from "react-native";
-import { Menu, MenuItem, MenuItemLabel, MenuSeparator } from "@/components/ui/menu"; 
-import { ListFilter, BadgeDollarSign, Heart, CheckSquare, Leaf, Vegan } from "lucide-react-native";
+import { TouchableOpacity, Text} from "react-native";
+import { Menu, MenuItem, MenuItemLabel} from "@/components/ui/menu"; 
+import { ListFilter, BadgeDollarSign, Heart, Leaf, Vegan } from "lucide-react-native";
 
 const FilterButton = () => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
