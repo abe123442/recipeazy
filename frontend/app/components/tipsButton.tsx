@@ -38,13 +38,6 @@ function TipsButton() {
             <Heading size="md" className="text-typography-950">
               Cooking Tips to make the recipe even better!
             </Heading>
-            <ModalCloseButton>
-              <Icon
-                as={CloseIcon}
-                size="md"
-                className="stroke-background-400 group-[:hover]/modal-close-button:stroke-background-700 group-[:active]/modal-close-button:stroke-background-900 group-[:focus-visible]/modal-close-button:stroke-background-900"
-              />
-            </ModalCloseButton>
           </ModalHeader>
           <ModalBody>
             <Text size="md" className="text-typography-500">
@@ -55,7 +48,6 @@ function TipsButton() {
               </ul>
             </Text>
           </ModalBody>
-          <ModalFooter className="flex justify-center items-center"></ModalFooter>
         </ModalContent>
       </Modal>
     </Center>
