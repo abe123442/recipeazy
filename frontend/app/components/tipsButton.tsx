@@ -11,16 +11,23 @@ import {
   ModalFooter,
 } from '@/components/ui/modal';
 import { Text } from '@/components/ui/text';
-import { Icon, CloseIcon } from '@/components/ui/icon';
+import { View } from 'react-native';
 import React from 'react';
 import { Sparkles } from 'lucide-react-native';
 
 function TipsButton() {
   const [showModal, setShowModal] = React.useState(false);
+
+  // List of cooking tips
+  const cookingTips = [
+    "Avoid pre-shredded cheese",
+    "Don’t over-cook the chicken",
+    "A long, flat noodle like Fettuccine is perfect",
+  ];
+
   return (
     <Center className="">
       <Button onPress={() => setShowModal(true)}>
-        {/* Replace with Lucide icon later */}
         <ButtonText className="flex flex-row justify-center">
           <Sparkles /> Cooking Tips{' '}
         </ButtonText>
@@ -40,11 +47,17 @@ function TipsButton() {
             </Heading>
           </ModalHeader>
           <ModalBody>
-            <Text size="md" className="text-typography-500">
-                - Avoid pre-shredded cheese
-                - Don’t over-cook the chicken
-                - A long, flat noodle like Fettuccine is perfect
-            </Text>
+            {/* Render the cooking tips as a list */}
+            <View>
+              {cookingTips.map((tip, index) => (
+                <View key={index} className="flex-row items-start mb-2">
+                  <Text className="text-typography-500 mr-2">•</Text>
+                  <Text size="md" className="text-typography-500 flex-1">
+                    {tip}
+                  </Text>
+                </View>
+              ))}
+            </View>
           </ModalBody>
         </ModalContent>
       </Modal>
