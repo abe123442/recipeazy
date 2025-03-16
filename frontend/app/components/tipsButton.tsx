@@ -41,11 +41,9 @@ function TipsButton() {
           </ModalHeader>
           <ModalBody>
             <Text size="md" className="text-typography-500">
-              <ul>
-                <li>- Avoid pre-shredded cheese</li>
-                <li>- Don’t over-cook the chicken</li>
-                <li>- A long, flat noodle like Fettuccine is perfect</li>
-              </ul>
+                - Avoid pre-shredded cheese
+                - Don’t over-cook the chicken
+                - A long, flat noodle like Fettuccine is perfect
             </Text>
           </ModalBody>
         </ModalContent>
