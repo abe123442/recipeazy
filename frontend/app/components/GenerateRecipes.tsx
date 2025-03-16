@@ -17,6 +17,7 @@ import React from 'react';
 import RecipeCard from '../components/recipeCard';
 import { ScrollView, View } from 'react-native';
 import { VStack } from '@/components/ui/vstack';
+import RecipeCardSmall from './recipeCardSmall';
 
 const recipes = [
   {
@@ -64,12 +65,10 @@ function GenerateRecipes() {
               <ScrollView className="flex-1">
                 <VStack className="flex flex-wrap justify-center">
                   {recipes.map((recipe, index) => (
-                    <RecipeCard
+                    <RecipeCardSmall
                       // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                      key={index}
                       name={recipe.name}
                       imgUrl={recipe.imgUrl}
-                      date={recipe.date}
                       link={recipe.link}
                     />
                   ))}
