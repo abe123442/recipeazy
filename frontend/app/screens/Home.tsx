@@ -34,7 +34,7 @@ const Home = () => {
     <>
       <View>
         <View className="py-5">
-          <Heading className="text-3xl p-2">Current Items</Heading>
+          <Heading className="text-3xl p-2 text-center">Current Items</Heading>
           <VStack space="md">
           <View className="flex flex-col items-center justify-center">
             {groceryList.map((value, i) => {
