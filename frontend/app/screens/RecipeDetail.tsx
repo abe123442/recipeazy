@@ -118,12 +118,12 @@ const RecipeDetail = () => {
       />
 
       {/* Recipe Name */}
-      <div className="flex flex-row gap-12 ml-auto">
+      <View className="flex flex-row gap-12 ml-auto">
         <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 8 }}>
           {recipe.name}
         </Text>
         <TipsButton />
-      </div>
+      </View>
 
       {/* Recipe Date */}
       <Text style={{ fontSize: 16, marginBottom: 8 }}>{recipe.date}</Text>

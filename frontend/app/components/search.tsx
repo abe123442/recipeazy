@@ -1,5 +1,6 @@
 import { InputField, Input } from '@/components/ui/input';
 import { Search } from 'lucide-react-native';
+import { View } from 'react-native';
 
 function SearchBar() {
   return (
@@ -10,10 +11,10 @@ function SearchBar() {
       isInvalid={false}
       isReadOnly={false}
     >
-      <div className="flex flex-row justify-center items-center w-auto p-2">
+      <View className="flex flex-row justify-center items-center w-auto p-2">
         <Search />
         <InputField placeholder="Find a Recipe..." />
-      </div>
+      </View>
     </Input>
   );
 }
