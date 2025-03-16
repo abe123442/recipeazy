@@ -40,22 +40,11 @@ const FilterButton = () => {
       {/* Healthy */}
       <MenuItem
         onPress={() => toggleFilter("Healthy")}
-        className={`flex-row items-center p-2 ${selectedFilters.includes("Healthy") ? "bg-blue-50 border" : ""}`}
+        className={`flex-row items-center p-2 ${selectedFilters.includes("Healthiness") ? "bg-blue-50 border" : ""}`}
       >
         <Heart size={20} color="#000" className="mr-2" />
         <MenuItemLabel className={selectedFilters.includes("Healthy") ? "font-bold" : ""}>
           Healthy
-        </MenuItemLabel>
-      </MenuItem>
-
-      {/* Check Ingredient */}
-      <MenuItem
-        onPress={() => toggleFilter("Check Ingredient")}
-        className={`flex-row items-center p-2 ${selectedFilters.includes("Check Ingredient") ? "bg-blue-50" : ""}`}
-      >
-        <CheckSquare size={20} color="#000" className="mr-2" />
-        <MenuItemLabel className={selectedFilters.includes("Check Ingredient") ? "font-bold" : ""}>
-          Check Ingredient
         </MenuItemLabel>
       </MenuItem>
 
