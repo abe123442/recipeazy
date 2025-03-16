@@ -52,8 +52,18 @@ const Home = () => {
             })}
             </View>
           </VStack>
-
+          
+            <View style={{ 
+              borderWidth: 2,
+              borderColor: '#ccc',
+              borderRadius: 10,
+              padding: 10,
+              alignItems: 'center', 
+              justifyContent: 'center',
+              marginTop: 20, 
+            }}>
           <GenerateRecipes />
+          </View>
         </View>
       </View>
 
