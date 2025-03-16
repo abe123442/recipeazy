@@ -36,13 +36,21 @@ const Home = () => {
         <View className="py-5">
           <Heading className="text-3xl p-2">Current Items</Heading>
           <VStack space="md">
+          <View className="flex flex-col items-center justify-center">
             {groceryList.map((value, i) => {
               return (
-                <Card className="" key={i}>
+                <Card className="" key={i} 
+                style={{width:300, height:50, 
+                justifyContent: 'center', alignItems: 'center',
+                borderWidth: 2,
+                borderColor: '#ccc',
+                borderRadius: 10,
+                marginBottom: 10,}}>
                   <Text>{value}</Text>
                 </Card>
               );
             })}
+            </View>
           </VStack>
 
           <GenerateRecipes />
