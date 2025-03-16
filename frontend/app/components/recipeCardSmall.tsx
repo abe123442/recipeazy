@@ -26,7 +26,7 @@ const RecipeCardSmall: React.FC<RecipeCardProps> = ({ name, imgUrl, link }) => {
             }}
             alt="image"
           />
-          <VStack>
+          <VStack className="flex justify-center">
             <Heading>{name}</Heading>
             <Link href={link}>
               <LinkText>See this recipe</LinkText>
