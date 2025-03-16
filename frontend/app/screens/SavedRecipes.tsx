@@ -7,7 +7,7 @@ import { VStack } from '@/components/ui/vstack';
 const SavedRecipes = () => {
   const recipes = [
     {
-      name: 'Chicken Alfredo',
+      name: 'Chicken Alfredo 69',
       imgUrl:
         'https://bellyfull.net/wp-content/uploads/2021/02/Chicken-Alfredo-blog-4.jpg',
       date: 'Feb 8, 2021',

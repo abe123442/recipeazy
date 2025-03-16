@@ -1,5 +1,5 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { useState } from 'react';
+import { FlatList, View } from 'react-native';
 import DropDownFilter from '../components/dropDownFilter';
 import ModalComponent from '../components/modal';
 import { Heading } from '@/components/ui/heading';
@@ -9,6 +9,18 @@ import { VStack } from '@/components/ui/vstack';
 import { Button, ButtonText } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
+// import { Modal } from 'react-native';
+import {
+  Modal,
+  ModalBackdrop,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+} from '@/components/ui/modal';
+import GenerateRecipes from '../components/GenerateRecipes';
+
 const groceryList = [
   'Dry Fettunicine Pasta',
   'Chicken Breasts',
@@ -16,6 +28,7 @@ const groceryList = [
   'Whipping Cream',
   'Grated Parmesan Cheese',
 ];
+
 const Home = () => {
   return (
     <View>
@@ -26,17 +39,16 @@ const Home = () => {
       <View>
         <Heading className="text-3xl p-2">Current Items</Heading>
         <VStack space="md">
-          {groceryList.map((value) => {
+          {groceryList.map((value, i) => {
             return (
-              <Card className="">
+              <Card className="" key={i}>
                 <Text>{value}</Text>
               </Card>
             );
           })}
         </VStack>
-        <Button className="">
-          <ButtonText>Generate</ButtonText>
-        </Button>
+
+        <GenerateRecipes />
       </View>
     </View>
   );
