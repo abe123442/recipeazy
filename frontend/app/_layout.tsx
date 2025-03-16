@@ -1,6 +1,6 @@
-import { Stack } from "expo-router";
-import "@/global.css";
-import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+import { Stack } from 'expo-router';
+import '@/global.css';
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 
 export default function RootLayout() {
   return (
@@ -12,7 +12,7 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="screens/RecipeDetail" // The detailed recipe screen
-          options={{ headerShown: true, title: "Recipe Details" }} // Show the header for the detail screen
+          options={{ headerShown: true, title: 'Recipe Details' }} // Show the header for the detail screen
         />
       </Stack>
     </GluestackUIProvider>
