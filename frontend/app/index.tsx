@@ -1,22 +1,39 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './screens/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import { View, Text } from 'react-native';
+import Icon from 'react-native-ionicons';
 import SavedRecipes from './screens/SavedRecipes';
-import Settings from './screens/Settings';
+import Home from './screens/Home';
+import { Bookmark, House } from 'lucide-react-native';
 
+// Create Bottom Tab Navigator
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
+export default function App() {
   return (
-    <Tab.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+
+          if (route.name === 'Home') {
+            return <House />;
+          } else if (route.name === 'Saved') {
+            return <Bookmark />;
+          }
+        },
+        tabBarActiveTintColor: 'black',
+        tabBarInactiveTintColor: 'gray',
+        tabBarStyle: {
+          backgroundColor: '#fff',
+          height: 60,
+          paddingBottom: 5,
+        },
+      })}
+    >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Saved" component={SavedRecipes} />
-      <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   );
-}
-export default function App() {
-  return <MyTabs />;
 }
