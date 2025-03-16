@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Saved" component={SavedRecipes} />
       <Tab.Screen name="Settings" component={Settings} />

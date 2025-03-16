@@ -31,26 +31,29 @@ const groceryList = [
 
 const Home = () => {
   return (
-    <View>
-      <View className="flex flex-col gap-3 justify-center items-center p-6">
-        <Heading className="font-bold text-3xl p-2">Upload Receipt</Heading>
+    <>
+      <View>
+        <View className="py-5">
+          <Heading className="text-3xl p-2">Current Items</Heading>
+          <VStack space="md">
+            {groceryList.map((value, i) => {
+              return (
+                <Card className="" key={i}>
+                  <Text>{value}</Text>
+                </Card>
+              );
+            })}
+          </VStack>
+
+          <GenerateRecipes />
+        </View>
+      </View>
+
+      <View className="flex-1 flex-col gap-3 items-center p-6 bottom-0 justify-end">
+        {/* <Heading className="font-bold text-3xl p-2">Upload Receipt</Heading> */}
         <ModalComponent />
       </View>
-      <View>
-        <Heading className="text-3xl p-2">Current Items</Heading>
-        <VStack space="md">
-          {groceryList.map((value, i) => {
-            return (
-              <Card className="" key={i}>
-                <Text>{value}</Text>
-              </Card>
-            );
-          })}
-        </VStack>
-
-        <GenerateRecipes />
-      </View>
-    </View>
+    </>
   );
 };
 

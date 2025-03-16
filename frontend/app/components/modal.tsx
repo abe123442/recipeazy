@@ -14,12 +14,14 @@ import { Text } from '@/components/ui/text';
 import { Icon, CloseIcon } from '@/components/ui/icon';
 import React from 'react';
 
+import { Upload } from 'lucide-react-native';
+
 function ModalComponent() {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <Center className="">
-      <Button onPress={() => setShowModal(true)}>
-        {/* Replace with Lucide icon later */}
+      <Button onPress={() => setShowModal(true)} size="xl">
+        <Upload color={'white'} />
         <ButtonText>Upload Receipt</ButtonText>
       </Button>
       <Modal
