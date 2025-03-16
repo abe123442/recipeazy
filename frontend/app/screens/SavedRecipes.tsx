@@ -3,6 +3,8 @@ import { Heading } from '@/components/ui/heading';
 import RecipeCard from '../components/recipeCard';
 import { ScrollView, View } from 'react-native';
 import { VStack } from '@/components/ui/vstack';
+import SearchBar from '../components/search';
+import FilterButton from '../components/filterButton';
 
 const SavedRecipes = () => {
   const recipes = [
@@ -24,8 +26,12 @@ const SavedRecipes = () => {
   ];
 
   return (
-    <View className="flex-1 flex-col items-center justify-center">
-      <Heading className="pt-4">Saved Recipes</Heading>
+    <View className="flex-1 flex-col items-center justify-center p-3">
+      <Heading className="pt-4 pb-3">Saved Recipes</Heading>
+      <View className="flex flex-row justify-center items-center">
+        <SearchBar />
+        <FilterButton />
+      </View>
       <ScrollView className="flex-1">
         <VStack className="flex flex-wrap justify-center">
           {recipes.map((recipe, index) => (

@@ -1,6 +1,7 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Text, View, Image, ScrollView, StyleSheet } from 'react-native';
 import StepCard from '../components/stepCard';
+import TipsButton from '../components/tipsButton';
 
 const RecipeDetail = () => {
   const { id } = useLocalSearchParams(); // Get the recipe ID from the URL
@@ -117,9 +118,12 @@ const RecipeDetail = () => {
       />
 
       {/* Recipe Name */}
-      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 8 }}>
-        {recipe.name}
-      </Text>
+      <View className="flex flex-row gap-12 ml-auto">
+        <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 8 }}>
+          {recipe.name}
+        </Text>
+        <TipsButton />
+      </View>
 
       {/* Recipe Date */}
       <Text style={{ fontSize: 16, marginBottom: 8 }}>{recipe.date}</Text>
