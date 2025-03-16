@@ -67,6 +67,7 @@ function GenerateRecipes() {
                   {recipes.map((recipe, index) => (
                     <RecipeCardSmall
                       // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                      key={index}
                       name={recipe.name}
                       imgUrl={recipe.imgUrl}
                       link={recipe.link}
